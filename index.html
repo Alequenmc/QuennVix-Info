@@ -115,21 +115,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="mockup-interface p-6">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                            <div class="card gradient-border">
-                                <i class="fas fa-film feature-icon mb-2"></i>
-                                <p class="text-sm text-white">Películas</p>
-                            </div>
-                            <div class="card gradient-border">
-                                <i class="fas fa-video feature-icon mb-2"></i>
-                                <p class="text-sm text-white">Videollamada</p>
-                            </div>
-                            <div class="card gradient-border">
-                                <i class="fas fa-comments feature-icon mb-2"></i>
-                                <p class="text-sm text-white">Chat</p>
-                            </div>
-                        </div>
+               
                     </div>
                 </div>
             </section>
@@ -280,13 +266,11 @@
         </div>
     </div>
 </div>
-
 <div id="solicitudes" class="hidden p-6 bg-gray-800 rounded-lg">
     <div class="flex justify-between items-center mb-6">
         <h3 class="text-2xl font-bold text-white">Solicitudes</h3>
         <div class="flex space-x-2">
             <button class="bg-purple-500/10 px-3 py-1 rounded-full hover:bg-purple-500/20 text-white">Recientes</button>
-            <button class="bg-purple-500/10 px-3 py-1 rounded-full hover:bg-purple-500/20 text-white">Pendientes</button>
         </div>
     </div>
     <div class="space-y-6">
@@ -395,175 +379,366 @@
 </div>
 
         </section>
-
-
-
-        <section class="w-full max-w-7xl mx-auto p-8">
-            <header class="text-center mb-16">
-                <h2 class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 tracking-tight mb-4">
-                    Experiencia Social Interactiva
-                </h2>
-                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                    Conecta, colabora y experimenta una nueva dimensión de interacción social
-                </p>
-            </header>
-            
-            <div class="grid md:grid-cols-3 gap-8">
+        <section class="text-center mb-16">
+            <h1 class="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600 mb-4 animate-floating">
+                QuennVix
+            </h1>
+            <p class="text-2xl text-gray-300 max-w-3xl mx-auto opacity-80">
+                Visualiza películas con comunicación multidimensional: chat, llamada y videollamada simultáneas.
+            </p>
+        </section>
+        <section class="grid md:grid-cols-3 gap-8 mb-16">
+            <div class="glass-morphism rounded-3xl p-8 relative overflow-hidden transition transform hover:scale-[1.02] hover:shadow-2xl">
+                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
                 
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center space-x-4">
+                        <i class="ri-chat-3-line text-5xl text-blue-400 animate-pulse"></i>
+                        <h3 class="text-3xl font-bold">Chat en Vivo</h3>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <span class="h-4 w-4 bg-green-500 rounded-full animate-pulse-glow"></span>
+                        <span class="text-sm text-gray-300">En línea (3)</span>
+                    </div>
+                </div>
 
+                <div class="bg-gray-800/50 rounded-xl p-4 h-96 overflow-y-auto mb-4 space-y-3">
+                    <!-- Mensajes de chat de ajustan con la logica js q esta en chat.js  -->
+                </div>
 
-
-
- <div class="glass-morphism rounded-3xl shadow-2xl transform transition-all hover:scale-105 p-8 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-500 to-purple-600"></div>
-    <div class="flex items-center justify-between mb-6">
-        <div class="flex items-center space-x-4">
-            <i class="ri-chat-3-line text-4xl text-blue-400"></i>
-            <h3 class="text-2xl font-bold">Chat en Vivo</h3>
-        </div>
-        <div class="flex items-center space-x-2">
-            <span class="h-3 w-3 bg-green-500 rounded-full pulse-animation"></span>
-            <span class="text-sm text-gray-300">En línea (3)</span>
-        </div>
-    </div>
-    
-    <div id="chatContainer" class="bg-gray-800 bg-opacity-50 rounded-xl p-4 h-96 overflow-y-auto space-y-4 mb-4">
-  
-    </div>
-    
-    <div class="flex space-x-2">
-        <input 
-            type="text" 
-            id="chatInput"
-            placeholder="Escribe un mensaje..." 
-            class="flex-grow bg-gray-700 text-white rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        >
-        <button id="sendMessageBtn" class="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-full transition">
-            <i class="ri-send-plane-fill"></i>
-        </button>
-    </div>
-</div>
-
-
-
-
-
-
-
-
-
-<div class="glass-morphism rounded-3xl shadow-2xl transform transition-all hover:scale-105 p-8 relative overflow-hidden">
-    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-green-500 to-teal-600"></div>
-    
-    <div class="flex items-center justify-between mb-6">
-        <div class="flex items-center space-x-4">
-            <i class="ri-vidicon-line text-4xl text-green-400"></i>
-            <h3 class="text-2xl font-bold">Videollamada</h3>
-        </div>
-        <span class="bg-green-500/20 text-green-500 px-3 py-1 rounded-full text-xs">
-            En vivo
-        </span>
-    </div>
-    <div id="videoParticipants" class="grid grid-cols-3 gap-4 mb-4">
-        <div class="bg-gray-800 rounded-xl aspect-square relative overflow-hidden group">
-            <img src="https://i.pravatar.cc/150?u=3" class="w-full h-full object-cover group-hover:scale-110 transition">
-            <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center p-1">
-                Andrea
+                <div class="flex space-x-2">
+                    <input 
+                        type="text" 
+                        placeholder="Mensaje..." 
+                        class="flex-grow bg-gray-700/70 text-white rounded-full px-4 py-2 focus:ring-2 focus:ring-blue-500 transition"
+                    >
+                    <button class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-full transition">
+                        <i class="ri-send-plane-fill text-xl"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div class="bg-gray-800 rounded-xl aspect-square relative overflow-hidden group">
-            <img src="https://i.pravatar.cc/150?u=4" class="w-full h-full object-cover group-hover:scale-110 transition">
-            <div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-center p-1">
-                Ana
+
+            <!-- Videollamada -->
+            <div class="glass-morphism rounded-3xl p-8 relative overflow-hidden transition transform hover:scale-[1.02] hover:shadow-2xl">
+                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-green-500 to-teal-600"></div>
+                
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center space-x-4">
+                        <i class="ri-vidicon-line text-5xl text-green-400 animate-pulse"></i>
+                        <h3 class="text-2xl font-bold">Videollamada</h3>
+                    </div>
+                    <span class="bg-green-500/30 text-green-300 px-4 py-2 rounded-full text-sm">
+                        En Vivo
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-4 mb-4">
+                    <div class="bg-gray-800 rounded-xl aspect-square relative overflow-hidden group">
+                        <img src="https://i.pravatar.cc/150?u=1" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <div class="absolute inset-x-0 bottom-0 bg-black/50 text-center py-2">Ana</div>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl aspect-square relative overflow-hidden group">
+                        <img src="https://i.pravatar.cc/150?u=2" class="w-full h-full object-cover group-hover:scale-110 transition duration-300">
+                        <div class="absolute inset-x-0 bottom-0 bg-black/50 text-center py-2">Carlos</div>
+                    </div>
+                    <div class="bg-gray-800 rounded-xl aspect-square flex items-center justify-center hover:bg-gray-700 transition group">
+                        <i class="ri-add-line text-5xl text-gray-400 group-hover:text-white"></i>
+                    </div>
+                </div>
+
+                <div class="flex justify-center space-x-4 mt-4">
+                    <button class="bg-green-500/20 p-4 rounded-full hover:bg-green-500/40 transition group">
+                        <i class="ri-mic-line text-2xl text-green-500 group-hover:text-green-400"></i>
+                    </button>
+                    <button class="bg-red-500/20 p-4 rounded-full hover:bg-red-500/40 transition group">
+                        <i class="ri-phone-line text-2xl text-red-500 group-hover:text-red-400"></i>
+                    </button>
+                </div>
             </div>
-        </div>
-        <div id="addParticipantBtn" class="bg-gray-800 rounded-xl aspect-square flex items-center justify-center cursor-pointer hover:bg-gray-700 transition group">
-            <i class="ri-add-line text-4xl text-gray-400 group-hover:text-white transition"></i>
-        </div>
-    </div>
-    <div id="friendsMenu" class="hidden bg-gray-800 rounded-xl p-4 max-h-64 overflow-y-auto mb-4">
-        <h4 class="text-xl font-semibold mb-4 flex items-center justify-between">
-            Invitar Amigos
-            <button id="closeFriendsMenu" class="text-gray-400 hover:text-white">
-                <i class="ri-close-line"></i>
-            </button>
-        </h4>
-        <div id="friendsList" class="space-y-2">
-        </div>
-    </div>
 
-    <div id="inviteAlert" class="hidden absolute top-20 left-1/2 transform -translate-x-1/2 bg-black/75 text-white py-2 px-4 rounded-full">
-        Enviando solicitud...
-    </div>
-    <div id="invitationSentAlert" class="hidden absolute top-20 left-1/2 transform -translate-x-1/2 bg-green-500/75 text-white py-2 px-4 rounded-full">
-        ¡Invitación enviada!
-    </div>
 
-    <div class="flex justify-center space-x-4 mt-4">
-        <button class="bg-green-500/20 p-3 rounded-full hover:bg-green-500/40 transition group">
-            <i class="ri-mic-line text-green-500 group-hover:text-green-400"></i>
-        </button>
-        <button class="bg-red-500/20 p-3 rounded-full hover:bg-red-500/40 transition group">
-            <i class="ri-phone-line text-red-500 group-hover:text-red-400"></i>
-        </button>
-    </div>
-</div>
+            <div class="glass-morphism rounded-3xl p-8 relative overflow-hidden transition transform hover:scale-[1.02] hover:shadow-2xl">
+                <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-pink-500 to-red-600"></div>
+                
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center space-x-4">
+                        <i class="ri-translate-2 text-5xl text-pink-400 animate-pulse"></i>
+                        <h3 class="text-3xl font-bold">Subtítulos IA</h3>
+                    </div>
+                    <span class="bg-pink-500/30 text-pink-300 px-4 py-2 rounded-full text-sm">
+                        En tiempo real
+                    </span>
+                </div>
 
-    
-                <div class="glass-morphism rounded-3xl shadow-2xl transform transition-all hover:scale-105 p-8 relative overflow-hidden">
-                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-pink-600"></div>
-                    <div class="flex items-center justify-between mb-6">
-                        <div class="flex items-center space-x-4">
-                            <i class="ri-movie-line text-4xl text-purple-400"></i>
-                            <h3 class="text-2xl font-bold">Control</h3>
+                <div class="bg-gray-800/50 rounded-xl p-4 h-96 overflow-y-auto mb-4 space-y-3 flex flex-col justify-end">
+                    <div class="bg-gray-700 rounded-xl p-3 self-start max-w-[80%] text-sm">
+                        Subtítulo traducido en tiempo real
+                    </div>
+                    <div class="flex justify-end">
+                        <div class="bg-blue-600 rounded-xl p-3 self-end max-w-[80%] text-sm">
+                            Traducción instantánea usando IA
                         </div>
-                        <span class="bg-purple-500/20 text-purple-500 px-3 py-1 rounded-full text-xs">
-                            Compartiendo
+                    </div>
+                </div>
+
+                <div class="flex space-x-2 items-center">
+                    <select class="bg-gray-700/70 text-white rounded-full px-4 py-2 flex-grow">
+                        <option>Español</option>
+                        <option>Inglés</option>
+                        <option>Francés</option>
+                    </select>
+                    <button class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full transition">
+                        <i class="ri-translate-2 text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600 mb-4">
+                    Salas de Visualización
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Crea y únete a salas privadas para disfrutar películas con amigos en tiempo real.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 to-purple-600"></div>
+                    
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold">Sala de Sci-Fi</h3>
+                        <span class="bg-indigo-500/30 text-indigo-300 px-3 py-1 rounded-full text-xs">
+                            5/8 Participantes
                         </span>
                     </div>
+
+                    <div class="flex -space-x-4 mb-4">
+                        <img src="https://i.pravatar.cc/50?u=1" class="w-12 h-12 rounded-full border-2 border-gray-800">
+                        <img src="https://i.pravatar.cc/50?u=2" class="w-12 h-12 rounded-full border-2 border-gray-800">
+                        <img src="https://i.pravatar.cc/50?u=3" class="w-12 h-12 rounded-full border-2 border-gray-800">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white">
+                            +2
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-2">
+                        <button class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition">
+                            Unirse
+                        </button>
+                        <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition">
+                            Detalles
+                        </button>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-teal-500 to-green-600"></div>
                     
-                    <div class="bg-gray-800 rounded-xl p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <div>
-                                <p class="font-semibold text-white">Avengers: Endgame</p>
-                                <p class="text-gray-400 text-sm">01:23:45 / 03:01:23</p>
-                            </div>
-                            <div class="flex items-center space-x-2">
-                                <i class="ri-volume-down-line text-gray-400"></i>
-                                <input 
-                                    type="range" 
-                                    id="volumeSlider" 
-                                    min="0" 
-                                    max="100" 
-                                    value="50" 
-                                    class="w-32 h-2 bg-gray-600 rounded-full appearance-none cursor-pointer slider"
-                                >
-                                <i class="ri-volume-up-line text-gray-400"></i>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-2xl font-bold">Maratón Marvel</h3>
+                        <span class="bg-teal-500/30 text-teal-300 px-3 py-1 rounded-full text-xs">
+                            3/6 Participantes
+                        </span>
+                    </div>
+
+                    <div class="flex -space-x-4 mb-4">
+                        <img src="https://i.pravatar.cc/50?u=4" class="w-12 h-12 rounded-full border-2 border-gray-800">
+                        <img src="https://i.pravatar.cc/50?u=5" class="w-12 h-12 rounded-full border-2 border-gray-800">
+                        <div class="w-12 h-12 rounded-full bg-gray-700 flex items-center justify-center text-white">
+                            +1
+                        </div>
+                    </div>
+
+                    <div class="flex space-x-2">
+                        <button class="bg-teal-600 text-white px-4 py-2 rounded-full hover:bg-teal-700 transition">
+                            Unirse
+                        </button>
+                        <button class="bg-gray-700 text-white px-4 py-2 rounded-full hover:bg-gray-600 transition">
+                            Detalles
+                        </button>
+                    </div>
+                </div>
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition flex items-center justify-center">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-500 to-orange-600"></div>
+                    
+                    <div class="text-center">
+                        <div class="mb-4 flex justify-center">
+                            <div class="bg-yellow-500/20 p-4 rounded-full">
+                                <i class="ri-add-line text-4xl text-yellow-500"></i>
                             </div>
                         </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex space-x-4">
-                                <button class="bg-blue-500/20 p-3 rounded-full hover:bg-blue-500/40 transition group">
-                                    <i class="ri-rewind-line text-blue-500 group-hover:text-blue-400"></i>
-                                </button>
-                                <button id="playPauseBtn" class="bg-blue-500/20 p-3 rounded-full hover:bg-blue-500/40 transition group">
-                                    <i class="ri-pause-line text-blue-500 group-hover:text-blue-400" id="playPauseIcon"></i>
-                                </button>
-                                <button class="bg-blue-500/20 p-3 rounded-full hover:bg-blue-500/40 transition group">
-                                    <i class="ri-play-line text-blue-500 group-hover:text-blue-400"></i>
-                                </button>
-                            </div>
-                            <button class="bg-purple-500/20 p-3 rounded-full hover:bg-purple-500/40 transition group">
-                                <i class="ri-fullscreen-line text-purple-500 group-hover:text-purple-400"></i>
-                            </button>
-                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Crear Sala</h3>
+                        <p class="text-gray-400 mb-4">Inventa tu propia experiencia de visualización</p>
+                        <button class="bg-yellow-600 text-white px-6 py-2 rounded-full hover:bg-yellow-700 transition">
+                            Crear
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
-    
-     
+  <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-cyan-600 mb-4">
+                    IA Cinematográfica
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Funciones avanzadas de inteligencia artificial para mejorar tu experiencia de visualización.
+                </p>
+            </div>
 
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-emerald-500 to-cyan-600"></div>
+                    
+                    <div class="flex items-center space-x-4 mb-6">
+                        <i class="ri-ai-generate text-5xl text-emerald-400 animate-pulse"></i>
+                        <h3 class="text-2xl font-bold">Recomendaciones Personalizadas</h3>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4 bg-gray-800 rounded-xl p-3">
+                            <img src="https://i.pravatar.cc/100?u=movie1" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="font-bold">Blade Runner 2049</h4>
+                                <p class="text-sm text-gray-400">98% probabilidad de coincidencia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 bg-gray-800 rounded-xl p-3">
+                            <img src="https://i.pravatar.cc/100?u=movie2" class="w-16 h-16 rounded-lg object-cover">
+                            <div>
+                                <h4 class="font-bold">Inception</h4>
+                                <p class="text-sm text-gray-400">92% probabilidad de coincidencia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 to-indigo-600"></div>
+                    
+                    <div class="flex items-center space-x-4 mb-6">
+                        <i class="ri-emotion-line text-5xl text-purple-400 animate-pulse"></i>
+                        <h3 class="text-2xl font-bold">Análisis Emocional</h3>
+                    </div>
+
+                    <div class="bg-gray-800 rounded-xl p-4 mb-4">
+                        <div class="flex justify-between mb-2">
+                            <span class="text-sm text-gray-400">Emociones Detectadas</span>
+                            <span class="text-sm text-purple-400">Tiempo Real</span>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <div class="w-12 h-2 bg-blue-500 mr-2 rounded"></div>
+                                <span class="text-sm">Sorpresa</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-2 bg-green-500 mr-2 rounded"></div>
+                                <span class="text-sm">Emoción</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-8 h-2 bg-yellow-500 mr-2 rounded"></div>
+                                <span class="text-sm">Tensión</span>
+                            </div>
+                        </div>
+                    </div>
+
+                   
+                </div>
+
+
+                
+            </div>
+        </section>
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-600 mb-4">
+                    Personalización Avanzada
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Transforma tu experiencia de visualización con herramientas personalizadas.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-500 to-pink-600"></div>
+                    
+                    <div class="flex items-center space-x-4 mb-6">
+                        <i class="ri-palette-line text-5xl text-rose-400 animate-pulse"></i>
+                        <h3 class="text-2xl font-bold">Tema Visual</h3>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 mb-4">
+                        <button class="bg-blue-500 h-12 rounded-lg hover:scale-105 transition"></button>
+                        <button class="bg-purple-500 h-12 rounded-lg hover:scale-105 transition"></button>
+                        <button class="bg-green-500 h-12 rounded-lg hover:scale-105 transition"></button>
+                    </div>
+
+
+                </div>
+
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-sky-500 to-blue-600"></div>
+                    
+                    <div class="flex items-center space-x-4 mb-6">
+                        <i class="ri-sound-module-line text-5xl text-sky-400 animate-pulse"></i>
+                        <h3 class="text-2xl font-bold">Audio Inmersivo</h3>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>Volumen</span>
+                            <input type="range" class="w-1/2 h-2 bg-gray-700 rounded-full appearance-none">
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Efectos</span>
+                            <div class="flex space-x-2">
+                                <button class="bg-sky-500/20 px-3 py-1 rounded-full text-sky-400">Estéreo</button>
+                                <button class="bg-sky-500/20 px-3 py-1 rounded-full text-sky-400">3D</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="glass-morphism rounded-3xl p-6 relative overflow-hidden hover:scale-[1.02] transition">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-500 to-orange-600"></div>
+                    
+                    <div class="flex items-center space-x-4 mb-6">
+                        <i class="ri-settings-4-line text-5xl text-amber-400 animate-pulse"></i>
+                        <h3 class="text-2xl font-bold">Preferencias</h3>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span>Subtítulos</span>
+                            <button class="bg-amber-500/20 px-3 py-1 rounded-full text-amber-400">
+                                Personalizado
+                            </button>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span>Modo Nocturno</span>
+                            <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+
+        <footer class="text-center py-8 border-t border-gray-800">
+            <p class="text-gray-400">© 2024 QuennVix. Todos los derechos reservados.</p>
+            <p class="text-gray-500">Todo lo que se muestra en la web,Esta siendo desarrollado, Algunas funciones no estarian disponibles.</p>
+            <p class="text-g-800">La pagina web no es responsiva correctamente,para mayor comodidad use un teléfono</p>
+        </footer>
     
     </main>
     <script src="ia.js"></script>
